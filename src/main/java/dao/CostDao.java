@@ -35,14 +35,13 @@ public class CostDao implements Serializable {
 				c.setCreatime(rs.getTimestamp("creatime"));
 				c.setStartime(rs.getTimestamp("startime"));
 				c.setCostType(rs.getString("cost_type"));
-	
 				list.add(c);
 			}
 			return list;
 		} catch (SQLException e) {	
 			e.printStackTrace();
 			throw new RuntimeException(
-					"查询资费失败");
+					"查询资费失败",e);
 		}finally {
 			DBUtil.close(conn);
 		}
@@ -53,7 +52,9 @@ public class CostDao implements Serializable {
 		for(cost cost : list) {
 			System.out.println(
 					cost.getCostID()+"名字"+
-					cost.getName()
+					cost.getName()+cost.getBaseDuration()+cost.getBaseCost()+
+					cost.getUnitCost()+cost.getStatus()+cost.getDescr()
+					+cost.getCreatime()+cost.getStartime()+cost.getCostType()
 					);
 			
 		}

@@ -30,11 +30,7 @@
 	  		<version>1.1.4</version>
 		</dependency>
 		
-		<dependency>
-	  		<groupId>com.github.noraui</groupId>
-	 	 	<artifactId>ojdbc8</artifactId>
-	  		<version>12.2.0.1</version>
-		</dependency>
+		
 		
 		<dependency>
 	 		 <groupId>commons-dbcp</groupId>
@@ -42,5 +38,10 @@
 	  		 <version>1.4</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>cn.easyproject</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.2.0</version>
+		</dependency>
   </dependencies>
 </project>

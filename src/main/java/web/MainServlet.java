@@ -26,8 +26,9 @@ public class MainServlet extends HttpServlet {
 		}
 		
 	}
+	
 	//查询资费
-	protected void findcost(
+	public void findcost(
 			HttpServletRequest req, 
 			HttpServletResponse res) 
 					throws ServletException, IOException {
@@ -36,7 +37,7 @@ public class MainServlet extends HttpServlet {
 		List<cost> list = dao.findAll();
 		
 		//将请求转发到jsp
-		req.setAttribute("cost", list);
+		req.setAttribute("costs", list);
 		req.getRequestDispatcher("WEB-INF/cost/find.jsp").forward(req, res);
 	}
 	

@@ -13,7 +13,7 @@ public class cost implements java.io.Serializable{
 	private Double baseCost;
 	//单位费用
 	private Double unitCost;
-	//状态（枚举）：0-启用；-禁用；
+	//状态（枚举）：0-启用；1-禁用；
 	private String status;
 	//资费描述
 	private String descr;
