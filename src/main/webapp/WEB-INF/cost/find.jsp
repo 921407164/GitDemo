@@ -59,7 +59,7 @@
                         <input type="button" value="基费" class="sort_asc" onclick="sort(this);" />
                         <input type="button" value="时长" class="sort_asc" onclick="sort(this);" />-->
                     </div>
-                    <input type="button" value="增加" class="btn_add" onclick="location.href='fee_add.html';" />
+                    <input type="button" value="增加" class="btn_add" onclick="location.href='toAddCost.do';" />
                 </div> 
                 <!--启用操作的操作提示-->
                 <div id="operate_result_info" class="operate_success">
@@ -98,8 +98,8 @@
                             </td>
                             <td>                                
                                 <input type="button" value="启用" class="btn_start" onclick="startFee();" />
-                                <input type="button" value="修改" class="btn_modify" onclick="location.href='fee_modi.html';" />
-                                <input type="button" value="删除" class="btn_delete" onclick="deleteFee();" />
+                                <input type="button" value="修改" class="btn_modify" onclick="location.href='toUpdateCost.do?id=${c.costID}';" />
+                                <input type="button" value="删除" class="btn_delete" onclick="location.href='delete.do?id=${c.costID}'" />
                             </td>
                         </tr>
                        </c:forEach> 
