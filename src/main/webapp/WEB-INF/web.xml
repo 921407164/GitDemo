@@ -17,4 +17,21 @@
   	<servlet-name>main</servlet-name>
   	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+  <!-- 配置错误页面：当tomcat捕获到这种错误时会自动
+  		转发.若转发写绝对路径，需省略项目名，tomcat自动填写 -->
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/WEB-INF/error.jsp</location>
+  </error-page>
+  
+  <!-- 配置filter，登陆检查过滤器 -->
+  <filter>
+  	<filter-name>login</filter-name>
+  	<filter-class>web.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>login</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  </filter-mapping>
 </web-app>
